@@ -1,0 +1,89 @@
+h1, h2, h3, {
+	font-family: 'Patua One', cursive;
+	text-align:center;
+}
+
+p {
+	font-family: 'Libre Baskerville', serif;
+	font-size: 20px;
+	text-align: center;
+	color:white;
+}
+
+body {
+	background-color: #212121;
+	text-align: center;
+}
+
+ul {
+	list-style-type:none;
+	overflow: hidden;
+	font-size: 30px;
+	text-align:center;
+	padding:0;
+	margin-block-start: inherit;
+}
+li {
+	display:inline;
+	font-family: 'Patua One', cursive
+}	
+li a {
+	display:inline-block;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	padding: 5px;
+	
+}
+li a:hover {
+	background: #474747;
+}
+
+#logo-title-container {
+	padding: 2em;
+}
+
+#logo {
+	width: 20%;
+	vertical-align: middle;
+}
+
+#title {
+	font-size: 60px;
+	color:white;
+	margin-bottom:0px;
+	text-shadow: 5px 5px #c7c7c7;
+	display: inline-block;
+	width: 75%;
+}
+#slogan {
+ font-size: 40px;
+ color:white;
+margin-top: 0px; 
+ text-shadow: 5px 5px #c7c7c7;
+}
+
+#Top {
+	font-family: 'Patua One', cursive;
+	margin-block-end:inherit;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	min-width: 100vh;
+	background-image: url('Pictures/background/Tallinn.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#intro {
+	padding: 0px ; 
+	margin: 10px ;
+}
+#intro {
+	border-radius: 25px;
+	background-color: #FFFFFF;
+	margin: 10px;
+}
+#nav {
+	background-color: #606060;
+}
