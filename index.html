@@ -46,9 +46,9 @@
 				<th>Follow us!</th>
 				<th>Copyright</th>
 				<tr>
-					<td><img class="logos" src="Pictures/outro/facebook.png">
-						<img class="logos" src="Pictures/outro/youtube.png">
-						<img class="logos" src="Pictures/outro/twitter.png">
+					<td><img onclick="social();" class="logos" src="Pictures/outro/facebook.png">
+						<img onclick="social();" class="logos" src="Pictures/outro/youtube.png">
+						<img onclick="social();" class="logos" src="Pictures/outro/twitter.png">
 						</td>
 					<td>&#169;EstGuide </td>
 				</tr>
@@ -62,6 +62,10 @@
 		  gtag('js', new Date());
 
 		  gtag('config', 'UA-166346379-1');
+		  
+		  function social() {
+		  gtag("event", "social");
+		  }
 		</script>
 	</body>
 	<script>

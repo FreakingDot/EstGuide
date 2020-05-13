@@ -52,7 +52,7 @@
 				<div class="response" id="mce-success-response" style="display:none"></div>
 			</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 			<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e91aad92614b050cd2dfba162_fdd16fd47d" tabindex="-1" value=""></div>
-			<div class="clear"><input type="submit" value="SUBMIT" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+			<div class="clear"><input type="submit" value="SUBMIT" name="subscribe" id="mc-embedded-subscribe" class="button" onclick="submitbutton();"></div>
 			</div>
 	</form>
 	</div>
@@ -64,9 +64,9 @@
 				<th>Follow us!</th>
 				<th>Copyright</th>
 				<tr>
-					<td><img class="logos" src="Pictures/outro/facebook.png">
-						<img class="logos" src="Pictures/outro/youtube.png">
-						<img class="logos" src="Pictures/outro/twitter.png">
+					<td><img onclick="social();" class="logos" src="Pictures/outro/facebook.png">
+						<img onclick="social();" class="logos" src="Pictures/outro/youtube.png">
+						<img onclick="social();" class="logos" src="Pictures/outro/twitter.png">
 						</td>
 					<td>&#169;EstGuide </td>
 				</tr>
@@ -83,5 +83,11 @@
 		</script>
 	</body>
 	<script>
+		function submitbutton() {
+		gtag("event", "subscribe");
+		}
+		function social() {
+		  gtag("event", "social");
+		  }
     </script>
 </html>
