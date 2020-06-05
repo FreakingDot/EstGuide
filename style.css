@@ -1,5 +1,5 @@
 h1, h2, h3, {
-	font-family: 'Basic', sans-serif;
+	font-family: 'Gentium Book Basic', serif;
 	text-align:center;
 	color: #B3B3B3;
 }
@@ -11,6 +11,7 @@ p {
 }
 body {
 	text-align: center;
+	font-family: 'Manuale', serif;
 	background-color: #D7EAF4;
 	margin:0;
 	padding:0;
@@ -20,8 +21,7 @@ ul {
 	overflow: hidden;
 	font-size:40px;
 	text-align:center;
-	margin-block-start: inherit;
-	
+	font-weight: bold;
 
 }
 li {
@@ -32,8 +32,8 @@ li a {
 	display:inline-block;
 	text-align: center;
 	text-decoration: none;
-	color: white;
 	padding: 5px;
+	color: white;
 }
 li a:hover {
 	background: #5bc0f7;
@@ -45,22 +45,22 @@ li a:hover {
 
 #logo {
 	width: 20%;
-	vertical-align: middle;
+	float: left;
+	display: block;	
 }
 
 #title {
-	font-size: 70px;
+	font-size: 50px;
 	color: white;
 	margin-bottom:0px;
-	text-shadow: 5px 5px #c7c7c7;
 	display: inline-block;
 	width: 75%;
+	margin: revert;
 }
 #slogan {
 	font-size: 50px; 
 	color: white;
 	margin-top: 0px; 
-	text-shadow: 5px 5px #c7c7c7;
 }
 
 #Top {
@@ -92,14 +92,12 @@ li a:hover {
 	width: 25px;
 }
 #outro {
-	font-size: 15px;
-	text-align: center;
-	font-family: 'Manuale', serif;
 	background-color:  #77CEFF;
-	bottom: 0px;
 	border-bottom-color: #77CEFF;
-	border-bottom-width: 10px;
-	display: flex;
+	position: absolute;
+	margin-bottom: 0;
+	margin-top: 0;
+	width: 100%;
 }
 #what {
 	 font-family: 'Manuale', serif;
@@ -127,7 +125,7 @@ input {
 	font-family: 'Oswald', sans-serif;
 	color: #000000;
 	border: none;
-	margin-bottom: 15px;
+	margin: 15px;
 }
 
 .button:hover {
@@ -145,7 +143,7 @@ input {
 }
 .pic {
 	width: 45% ;
-	height: 60%;
+	height: auto;
 }
 #whopic {
 	float: left;
@@ -179,4 +177,31 @@ table {
 	text-align: center;
 	color: #000000;
 	margin-bottom: 30px;
+}
+#mc_embed_signup {
+	background-color: #D7EAF4;
+	position: relative;
+	margin-bottom: 0;
+}
+.tripimg {
+	width: 25vw;
+	height: auto;
+}
+.resultpics {
+	width: 25vw;
+	display: block;
+}
+.resultsitself{
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+	background-color: #F7FBFD;
+}
+.resultday {
+	font-family: 'Manuale', serif;
+	font-size: 30px;
+	text-align: center;
+	color: #000000;
+	margin-bottom: 30px;
+	font-weight: bolder;
 }

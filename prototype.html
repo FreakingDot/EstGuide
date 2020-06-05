@@ -1,37 +1,53 @@
 <html>
 	<head>
 		 <link rel="icon" href="Pictures/icon/icon.png"/> 
-		<title>EstGuide&trade; </title>
+		<title>EstGuide</title>
 		<link rel="stylesheet" href="style.css"/>
 		<!-- Headings -->
 		<link href="https://fonts.googleapis.com/css2?family=Basic&display=swap" rel="stylesheet"> 
 		<!-- Paragraph/text -->
-<link href="https://fonts.googleapis.com/css2?family=Manuale&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Manuale&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet"> 
 </head>
 	<body>
-			<div id="Top">
+		<div id="Top">
 			<div id="logo-title-container">
-				<img id="logo" src="Pictures/icon/icon.png"/>
-				<span id="title"><strong>EstGuide</strong></span>
+				<img id="logo" src="Pictures/icon/icon.png">
+				<strong><h1 id="title">EstGuide</h1></strong>
 			<h2 id="slogan"><i>Memorable Estonia!</i></h2>		
 		</div>
+		
 		<div id="nav">
 		<ul compact>
-			<li><a href="index.html">Home</li></a>
-			<li><a href="prototype.html">Prototype</li></a>
-			<li><a href="demo.html">Register for alpha!</li></a>
+			<li><a onclick="home()" href="index.html">Home</li></a>
+			<li><a onclick="prototype()" href="prototype.html">Prototype</li></a>
 		</ul>
 		</div>
 		</div>
-		<p> Our prototype can be found on figma!<p>
-		<div>
-		<a href="https://www.figma.com/file/XyMQ9OWS41OwkGCmYu1CmI/Untitled" target="_blank" >
-	<img onclick="figma();" id="yas" target="_blank" src="Pictures/prototype/yas.jpg"/> </a>
-	</div>
-	<p> </>
-		<form>
-		</form>
+		<div id="questions">
+		<b><p>Plan your trip!</p></b> <br>
+		
+		
+			<div class="background">
+				<p>How long will you be staying?<p>
+				<input id="howlongdays" class="form"> <label for="howlongdays">day(s)</label>
+			</div>
+			
+			<div class="background">
+				<p>What kind of trip will it be?<p>
+				<input id="whatkinded" type="radio" name="trip" class="form" value="educational trip"> <label for="whatkinded">Educational trip</label> <br>
+				<input id="whatkindfrie" type="radio" name="trip" class="form" value="trip with friends"> <label for="whatkindfrie">Trip with friends</label> <br>
+				<input id="whatkindfam" type="radio" name="trip" class="form" value="trip with family"> <label for="whatkindfam">Trip with family</label> <br> 
+				<input id="whatkindal" type="radio" name="trip" class="form" value="trip alone"> <label for="whatkindfam">Trip alone</label> <br> 
+			</div>
+			<br>
+			<button  onclick="cleaning(), plans()" class="button"  > SEE MY PLAN </button>
+			
+		</div>
+		
+		<div id="results">
+		</div>
+		
 		<div id="outro">
 			<table id="contact">
 				<th>Follow us!</th>
@@ -47,20 +63,247 @@
 		</div>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166346379-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
+	<script>
+	
+	  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
-
 		  gtag('config', 'UA-166346379-1');
-		</script>
-	</body>
+	</script>
 	<script>
-		function figma() {
-		gtag("event", "figma");
-	}
-	function social() {
-		  gtag("event", "social");
-		  }
-    </script>
-</html>
+	var attraction=[
+		{
+			"imageURL": "https://i.imgur.com/zimISO0.jpg",
+			"itis": "Billiard",
+			"id": 0
+		},
+		{
+			"imageURL": "https://i.imgur.com/9qgOwVx.jpg",
+			"itis": "Paintball",
+			"id": 1
+		},
+		{
+			"imageURL": "https://i.imgur.com/RmQrqb8.jpg",
+			"itis": "Axe Throwing",
+			"id": 2 
+		},
+		{
+			"imageURL": "https://i.imgur.com/DwdpjtF.jpg",
+			"itis": "VR",
+			"id": 3
+		},
+		{
+			"imageURL": "https://i.imgur.com/TOkoQM6.jpg",
+			"itis": "Mini Golf",
+			"id": 4
+		},
+		{
+			"imageURL": "https://i.imgur.com/MWOf1aZ.jpg",
+			"itis": "Shooting Range",
+			"id": 5
+		},
+		{
+			"imageURL": "https://i.imgur.com/kHQYfTD.jpg",
+			"itis": "Bowling",
+			"id":6
+		},
+		{
+			"imageURL": "https://i.imgur.com/1BIcU1E.jpg",
+			"itis": "Kart Park",
+			"id":7
+		},
+		{
+			"imageURL": "https://i.imgur.com/TzeJzxg.jpg",
+			"itis": "Escape Room",
+			"id":8
+		},
+		{
+			"imageURL": "https://i.imgur.com/eiqu1lf.jpg",
+			"itis": "Zelluloosi Trampoline Center",
+			"id":9
+		},
+		{
+			"imageURL": "https://i.imgur.com/bIJc8DB.jpg",
+			"itis": "Tallinn Zoo",
+			"id": 10
+		},
+		{
+			"imageURL": "https://i.imgur.com/LTsVDLs.jpg",
+			"itis": "Tallinn Old Town",
+			"id": 11
+		},
+		{
+			"imageURL": "https://i.imgur.com/0zr6QPk.jpg",
+			"itis": "Kadrioru Park",
+			"id": 12
+		},
+		{
+			"imageURL": "https://i.imgur.com/vZzSUbf.jpg",
+			"itis": "Estonian Open Air Museum",
+			"id": 13
+		},
+		{
+			"imageURL": "https://i.imgur.com/YPxq45Z.jpg",
+			"itis": "Tallinn Tv Tower",
+			"id": 14
+		},
+		{
+			"imageURL": "https://i.imgur.com/mwikT5u.jpg",
+			"itis": "Lahemaa National Park",
+			"id": 15
+		},
+		{
+			"imageURL": "https://i.imgur.com/9WNjuxb.jpg",
+			"itis": "St. Lawrence Church",
+			"id": 16
+		},
+		{
+			"imageURL": "https://i.imgur.com/owwTA6A.jpg",
+			"itis": "Pirita Beach",
+			"id": 17
+		},
+		{
+			"imageURL": "https://i.imgur.com/u4UeJ6e.jpg",
+			"itis": "Pakri Hiking Trail",
+			"id": 18
+		},
+		{
+			"imageURL": "https://i.imgur.com/WW8xYdr.jpg",
+			"itis": "Blue Springs of Saula",
+			"id": 19
+		},
+		{
+			"imageURL": "https://i.imgur.com/5JjRaIN.jpg",
+			"itis": "Fat Margaret",
+			"id": 20
+		},
+		{
+			"imageURL": "https://i.imgur.com/IWpT46k.jpg",
+			"itis": "Niguliste Museum",
+			"id": 21
+		},
+		{
+			"imageURL": "https://i.imgur.com/GIKhlD8.jpg",
+			"itis": "Museum of Estonian Architecture",
+			"id": 22
+		},
+		{
+			"imageURL": "https://i.imgur.com/E0c8eJZ.jpg",
+			"itis": "Estonian Theatre and Music Museum",
+			"id": 23
+		},
+		{
+			"imageURL": "https://i.imgur.com/bo4Pr2D.jpg",
+			"itis": "Kumu Art Museum",
+			"id": 24
+		},
+		{
+			"imageURL": "https://i.imgur.com/8bU3m92.jpg",
+			"itis": "Estonian War Museum",
+			"id":25
+		},
+		{
+			"imageURL": "https://i.imgur.com/RATKVAv.jpg",
+			"itis": "Vabamu Museum of Occupations and Freedom",
+			"id":26
+		},
+		{
+			"imageURL": "https://i.imgur.com/FcX79aG.jpg",
+			"itis": "KGB Museum",
+			"id": 27 
+		},
+		{
+			"imageURL": "https://i.imgur.com/dNEcTC4.jpg",
+			"itis": "Estonian Health Care Museum",
+			"id": 28
+		},
+		{
+			"imageURL": "https://i.imgur.com/eLrDrCL.jpg",
+			"itis": "Luscher & Matiesen Museum of Estonian Drink Culture",
+			"id": 29
+		},
+	];
+  
+	function cleaning() {
+		var day=document.getElementById("howlongdays").value;
+		console.log(day);
+		var trip=document.querySelector('input[name="trip"]:checked').value;
+		console.log(trip);
+
+		
+		console.log(attraction);
+		
+		
+		document.getElementById("questions").innerHTML="";
+		
+		var planintro=document.createElement("p");
+		planintro.innerHTML= "Your "+day+ " day " + trip + ":";
+		planintro.setAttribute("class", "resultday");
+		document.getElementById("questions").appendChild(planintro);
+
+		for (var index=0; index < day; index++) {
+			var days =document.createElement("p");
+			days.innerHTML="Day "+ (index+1);
+			days.setAttribute("class", "resultday");
+			document.getElementById("results").appendChild(days);
+
+			var box=document.createElement("div");
+			box.setAttribute("id", (index+1)+'day');
+			box.setAttribute("class", "resultsitself");
+			document.getElementById("results").appendChild(box);
+
+
+			for (var x=0; x<3; x++) {
+				var sug1= Math.floor(Math.random() * 29);
+				var randomnr = Math.floor(Math.random() * 10000000000000000000000000000000);
+				
+				var tripbox=document.createElement("div");
+				tripbox.setAttribute("id", randomnr +'tripbox');
+				tripbox.setAttribute("class", "resultpics");
+				document.getElementById((index+1)+"day").appendChild(tripbox);
+
+				var trippic1 = document.createElement("img");
+				trippic1.setAttribute("src", attraction[sug1].imageURL);
+				trippic1.setAttribute("class", "tripimg" );
+				document.getElementById(randomnr+"tripbox").appendChild(trippic1);
+
+				var tripis1 = document.createElement("p");
+				tripis1.innerHTML=attraction[sug1].itis;
+				document.getElementById(randomnr+"tripbox").appendChild(tripis1);
+			};
+			
+		
+	};
+		var newplan=document.createElement("button");
+		newplan.setAttribute("class", "button");
+		newplan.setAttribute("onclick", "location.reload();");
+		newplan.innerHTML="CREATE A NEW PLAN";
+		document.getElementById("results").appendChild(newplan);
+	};
+	</script>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166346379-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+	  	gtag('js', new Date());
+	  	gtag('config', 'UA-166346379-1');
+
+			function social() {
+			  	gtag("event", "socialspg2");
+			};
+			
+			function prototype() {
+			  gtag("event", "prototypepg2");
+			};
+	
+			function home() {
+			  gtag("event", "homepg2");
+			};
+
+			function plans() {
+			  gtag("event", "plans");
+			};
+
+			</script>
+	</html>
