@@ -98,6 +98,7 @@ li a:hover {
 	margin-bottom: 0;
 	margin-top: 0;
 	width: 100%;
+	align-content: bottom;
 }
 #what {
 	 font-family: 'Manuale', serif;
